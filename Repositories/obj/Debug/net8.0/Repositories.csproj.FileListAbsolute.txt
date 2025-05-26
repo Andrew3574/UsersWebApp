@@ -1,0 +1,17 @@
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\bin\Debug\net8.0\Repositories.deps.json
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\bin\Debug\net8.0\Repositories.runtimeconfig.json
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\bin\Debug\net8.0\Repositories.dll
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\bin\Debug\net8.0\Repositories.pdb
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\bin\Debug\net8.0\Models.dll
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\bin\Debug\net8.0\Models.pdb
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\Reposito.787EC4B2.Up2Date
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\Repositories.dll
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\refint\Repositories.dll
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\Repositories.pdb
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\Repositories.genruntimeconfig.cache
+D:\SummerCourse\task4\WebApp_Tak4\Repositories\obj\Debug\net8.0\ref\Repositories.dll

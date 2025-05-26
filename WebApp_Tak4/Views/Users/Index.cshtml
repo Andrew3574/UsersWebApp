@@ -1,0 +1,151 @@
+﻿@using WebApp_Task4.HtmlHelpers
+@model IEnumerable<WebApp_Tak4.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    .toolbar {
+        display: flex;
+        align-items: center;
+        background-color: #f9f9f9;
+        padding: 10px;
+    }
+
+    .toolButtons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .toolButton {
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: opacity 0.3s;
+        border: 2px solid transparent;
+    }
+
+    .block-button {
+        border-color: blue;
+        color: blue;
+    }
+
+        .block-button i {
+            color: blue;
+        }
+
+    .unblock-button {
+        border-color: blue;
+    }
+
+        .unblock-button i {
+            color: blue;
+        }
+
+    .delete-button {
+        border-color: red;
+    }
+
+        .delete-button i {
+            color: red;
+        }
+
+    .toolButton:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        opacity: 0.8;
+    }
+
+    .filterInputContainer {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .filterButton {
+        margin-left: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border-width: 1px;
+        font-size: 16px;
+    }
+</style>
+
+@if (!string.IsNullOrEmpty(ViewData["Operation"]?.ToString()))
+{
+    <div class="alert alert-success" role="alert">
+        @ViewData["Operation"]
+    </div>
+}
+
+<form method="post">
+    <div class="toolbar">
+        <div class="toolButtons">
+            <button class="toolButton block-button" type="submit" asp-action="Block">
+                <i class="fa fa-lock"></i>
+                Block
+            </button>
+            <button class="toolButton unblock-button" type="submit" asp-action="UnBlock">
+                <i class="fa fa-unlock"></i>
+            </button>
+            <button class="toolButton delete-button" type="submit" asp-action="Delete">
+                <i class="fa fa-trash"></i>
+            </button>
+        </div>
+        <div class="filterInputContainer">
+            <input class="filterButton" name="filterInput" type="text" placeholder="Filter" />
+            <button style="padding:7px 12px" class="filterButton" type="submit" value="Filter" asp-action="Filter">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Email)</th>
+                <th>Last seen</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr onclick="toggleCheckbox(this)">
+                    <td>
+                        <input type="checkbox" name="selectedUserIndexes" value="@item.Userid" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Surname), @Html.DisplayFor(modelItem => item.Name)<br />
+                        @Html.DisplayFor(modelItem => item.UserState)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td title="@item.Lastlogin.ToString("f")">
+                        @Html.LastLoginTime(item.Lastlogin)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+
+<script>
+    function toggleCheckbox(row) {
+        const checkbox = row.querySelector('input[type="checkbox"]');
+        checkbox.checked = !checkbox.checked;
+    }   
+
+     $(document).ready(function() {
+        $('.last-login').each(function() {
+            const lastLoginDate = new Date($(this).data('lastlogin'));
+            const timeAgo = getTimeAgo(lastLoginDate);
+            $(this).find('.last-login-text').text(timeAgo);
+        });
+    });
+</script>

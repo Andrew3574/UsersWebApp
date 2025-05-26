@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WebApp_Tak4.props" />
+</Project>
