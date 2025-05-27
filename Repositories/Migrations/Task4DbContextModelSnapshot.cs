@@ -2,21 +2,18 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using WebApp_Tak4.Data;
 
 #nullable disable
 
-namespace WebApp_Tak4.Migrations
+namespace Repositories.Migrations
 {
     [DbContext(typeof(Task4DbContext))]
-    [Migration("20250524132141_init")]
-    partial class init
+    partial class Task4DbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,7 +57,7 @@ namespace WebApp_Tak4.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Userstate")
+                    b.Property<int>("UserState")
                         .HasMaxLength(10)
                         .HasColumnType("integer")
                         .HasColumnName("userstate");

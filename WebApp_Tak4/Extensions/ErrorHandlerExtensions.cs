@@ -1,4 +1,6 @@
-﻿namespace WebApp_Tak4.Extensions
+﻿using WebApp_Tak4.Extensions;
+
+namespace WebApp_Task4.Extensions
 {
     public static class ErrorHandlerExtensions
     {

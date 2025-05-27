@@ -1,0 +1,31 @@
+version: '3.8'
+
+networks:
+  dating-network:
+    driver: bridge
+
+services:
+  WebApp_Task4:
+    image: mcr.microsoft.com/dotnet/aspnet:8.0
+    container_name: WebApp_Task4
+    build:
+      context: .
+      dockerfile: ./WebApp_Tak4/Dockerfile
+    ports:
+      - "8080:8080" 
+    environment:
+      - ASPNETCORE_URLS=http://+:8080 
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__default=Server=postgres;User ID=postgres;Password=123;Database=db;Port=5432;Integrated Security=true;Pooling=true;
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: db
+    ports:
+      - "5432:5432"

@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using WebApp_Tak4.Models;
 
 namespace WebApp_Tak4.Data;
 
 public partial class Task4DbContext : DbContext
 {
+    private string _connectionString;
     public Task4DbContext()
     {
     }
