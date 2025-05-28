@@ -11,7 +11,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["WebApp_Tak4/WebApp_Task4.csproj", "WebApp_Tak4/"]
+COPY ["./WebApp_Task4.csproj", "WebApp_Tak4/"]
 RUN dotnet restore "./WebApp_Tak4/WebApp_Task4.csproj"
 
 COPY . . 

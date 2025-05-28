@@ -16,15 +16,22 @@ using WebApp_Task4.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<Task4DbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("default"));
+});
 
-builder.Services.AddDbContext<Task4DbContext>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<EmailService>();
 builder.Services.AddSingleton<EncryptionService>();
 builder.Services.AddSingleton<JwtAuthenticationService>();
 var app = builder.Build();
 
-app.ApplyMigrations();
+/*if (app.Environment.IsDevelopment())
+{
+    app.ApplyMigrations();
+}*/
 
 app.ErrorHandlerMiddleware();
 app.UseHttpsRedirection();

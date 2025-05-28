@@ -27,7 +27,7 @@ namespace WebApp_Tak4.Extensions
         }
 
         private static Task HandleException(HttpContext context, Exception exception)
-        { 
+        {
             int statusCode = (int)HttpStatusCode.InternalServerError;
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = statusCode;
