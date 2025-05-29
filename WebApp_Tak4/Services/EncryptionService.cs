@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using Microsoft.Extensions.Configuration;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace WebApp_Task4.Services
@@ -6,6 +7,10 @@ namespace WebApp_Task4.Services
     public class EncryptionService
     {
         private readonly string _key;
+        private readonly IConfigurationBuilder _configuration =
+            new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json");
 
         public EncryptionService(IConfiguration configuration)
         {

@@ -35,7 +35,7 @@ namespace WebApp_Task4.Controllers
         {
             if(ModelState.IsValid)
             {
-                User user = await _userRepository.GetByEmail(model.Email);
+                User? user = await _userRepository.GetByEmail(model.Email);
                 if(user == null)
                 {
                     ViewData["ErrorMessage"] = "Such user doesnt exist";
