@@ -1,0 +1,15 @@
+D:\SummerCourse\task4\WebApp_Tak4\Models\bin\Release\net8.0\Models.deps.json
+D:\SummerCourse\task4\WebApp_Tak4\Models\bin\Release\net8.0\Models.runtimeconfig.json
+D:\SummerCourse\task4\WebApp_Tak4\Models\bin\Release\net8.0\Models.dll
+D:\SummerCourse\task4\WebApp_Tak4\Models\bin\Release\net8.0\Models.pdb
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\Models.csproj.AssemblyReference.cache
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\Models.AssemblyInfoInputs.cache
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\Models.AssemblyInfo.cs
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\Models.csproj.CoreCompileInputs.cache
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\Models.sourcelink.json
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\Models.dll
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\refint\Models.dll
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\Models.pdb
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\Models.genruntimeconfig.cache
+D:\SummerCourse\task4\WebApp_Tak4\Models\obj\Release\net8.0\ref\Models.dll

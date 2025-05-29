@@ -9,7 +9,6 @@ namespace WebApp_Tak4.Data;
 
 public partial class Task4DbContext : DbContext
 {
-    private string _connectionString;
     public Task4DbContext()
     {
     }

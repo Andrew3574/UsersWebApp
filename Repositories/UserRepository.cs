@@ -28,6 +28,9 @@ namespace WebApp_Task4.Repositories
 
         public async Task<User?> GetByEmail(string? email)
         {
+            if (string.IsNullOrEmpty(email)) 
+                return null;
+
             return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
 
