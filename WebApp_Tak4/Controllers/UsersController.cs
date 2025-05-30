@@ -27,7 +27,6 @@ namespace WebApp_Task4.Controllers
         {
             return View(await _userRepository.GetAll());
         }
-
         [HttpPost]
         public async Task<IActionResult> Block(string[] selectedUserIndexes)
         {
@@ -39,7 +38,6 @@ namespace WebApp_Task4.Controllers
             }
             return View("Index", await GetUsers());
         }
-
         [HttpPost]
         public async Task<IActionResult> UnBlock(string[] selectedUserIndexes)
         {
@@ -51,7 +49,7 @@ namespace WebApp_Task4.Controllers
             }
             return View("Index", await GetUsers());
         }
-
+        [JwtAuth]
         [HttpPost]
         public async Task<IActionResult> Delete(string[] selectedUserIndexes)
         {

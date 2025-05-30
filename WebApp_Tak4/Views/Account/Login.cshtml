@@ -47,6 +47,12 @@
                             @ViewData["ErrorMessage"]
                         </div>
                     }
+                    @if (!string.IsNullOrEmpty(TempData["Block"]?.ToString()))
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @TempData["Block"]
+                        </div>
+                    }
 
                     <form asp-action="Login" method="post">
                         <div class="form-group">

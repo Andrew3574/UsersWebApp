@@ -24,11 +24,11 @@ builder.Services.AddDbContext<Task4DbContext>(options =>
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<EmailService>();
+builder.Services.AddScoped<JwtAuthAttribute>();
 builder.Services.AddSingleton<EncryptionService>();
 builder.Services.AddSingleton<JwtAuthenticationService>();
 var app = builder.Build();
 
-app.ApplyMigrations();
 
 app.ErrorHandlerMiddleware();
 app.UseHttpsRedirection();

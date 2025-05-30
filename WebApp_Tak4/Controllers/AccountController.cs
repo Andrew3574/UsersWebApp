@@ -41,6 +41,11 @@ namespace WebApp_Task4.Controllers
                     ViewData["ErrorMessage"] = "Such user doesnt exist";
                     return View(model);
                 }
+                if(user.UserState == UserState.blocked)
+                {
+                    ViewData["ErrorMessage"] = "You were blocked";
+                    return View(model);
+                }
                 string inputPasswordHash = HashPassword(model.Password+model.Email);
                 if(user.Passwordhash != inputPasswordHash)
                 {
